@@ -60,7 +60,7 @@ using v8::ArrayBuffer;
 		goto err;\
 	}\
 	iter = info[2]->Int32Value();\
-	if (iter <= 0 || isnan(iter) || isinf(iter)) {\
+	if (iter <= 0) {\
 		type_error = "Iterations must be greater than 0";\
 		goto err;\
 	}\
@@ -69,7 +69,7 @@ using v8::ArrayBuffer;
 		goto err;\
 	}\
 	keylen = info[3]->Int32Value();\
-	if (keylen <= 0 || isnan(keylen) || isinf(keylen)) {\
+	if (keylen <= 0) {\
 		type_error = "Key length must be greater than 0";\
 		goto err;\
 	}
